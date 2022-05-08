@@ -11,4 +11,4 @@ openssl req -nodes -newkey rsa:4096 -keyout ${root_key} -out ${root_csr} -subj "
 
 # self sign the CA key
 openssl x509 -req -in ${root_csr} -signkey ${root_key} -out ${root_crt} -days 3650
-openssl x509 -in CA.crt -text -noout
+openssl x509 -in ${root_crt} -text -noout
