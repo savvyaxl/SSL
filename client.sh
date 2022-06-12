@@ -1,6 +1,13 @@
 #!/bin/bash
 
-export name='alexS10'
+if [[ -n $1 ]]
+then
+    name=$1
+else
+    exit 1
+fi
+
+export name
 . ./paths.ini
 mkdir -p ${working_dir}
 

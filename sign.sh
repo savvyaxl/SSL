@@ -1,6 +1,13 @@
 #!/bin/bash
 
-#export name='brew.savvyaxl.com.br'
+if [[ -n $1 ]]
+then
+    name=$1
+else
+    exit 1
+fi
+
+export name
 . ./paths.ini
 
 mkdir -p ${PEM_dir}
