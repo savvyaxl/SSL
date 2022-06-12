@@ -16,4 +16,4 @@ this will make things executable
 
 # Create CLIENT certificate and sign it
 ./server.sh &#60;site FQDN&#62; <br>
-./sign.sh &#60;site FQD&#62;
+./sign.sh &#60;site FQDN&#62;
