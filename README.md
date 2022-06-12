@@ -19,9 +19,9 @@ They will create the certificate sighing request
 ./ca_selfsign.sh
 
 # Create SERVER certificate and sign it
-./client.sh &#60;certificate name&#62; <br>
-./sign.sh &#60;certificate name&#62;
-
-# Create CLIENT certificate and sign it
 ./server.sh &#60;site FQDN&#62; <br>
 ./sign.sh &#60;site FQDN&#62;
+
+# Create CLIENT certificate and sign it
+./client.sh &#60;certificate name&#62; <br>
+./sign.sh &#60;certificate name&#62;
