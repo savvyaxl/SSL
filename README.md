@@ -8,6 +8,7 @@ this will make things executable
 
 # Important
 Make changes to the scripts with your own information<br>
+Change the [ dn ] section.
 <b>Change:</b><br>
 ca_create.sh<br>
 client.sh<br>
