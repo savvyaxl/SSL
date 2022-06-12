@@ -11,7 +11,7 @@ if [[ ! -f ${DB} ]]; then touch ${DB}; fi
 if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
 
 # self sign the CA key
-openssl ca -in ${root_csr} -out ${root_crt} -keyfile ${root_key} -selfsign -config <(
+openssl ca -batch -in ${root_csr} -out ${root_crt} -keyfile ${root_key} -selfsign -config <(
 cat <<-EOF
 [ default ]
 ca                      = root-ca               # CA name
