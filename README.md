@@ -7,8 +7,8 @@ sh runme.sh<br>
 this will make things executable
 
 # Important
-Make changes to the scripts with your own information
-<b>Change:<b><br>
+Make changes to the scripts with your own information<br>
+<b>Change:<\b><br>
 ca_create.sh<br>
 client.sh<br>
 server.sh<br>
