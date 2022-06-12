@@ -7,7 +7,7 @@ sh runme.sh
 this will make things executable
 
 # Create CA
-./ca_create.sh
+./ca_create.sh <br>
 ./ca_selfsign.sh
 
 # Create SERVER certificate and sign it
