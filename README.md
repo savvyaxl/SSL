@@ -8,7 +8,7 @@ this will make things executable
 
 # Important
 Make changes to the scripts with your own information<br>
-<b>Change:<br>
+<b>Change:<\b><br>
 ca_create.sh<br>
 client.sh<br>
 server.sh<br>
