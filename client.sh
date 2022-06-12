@@ -1,10 +1,18 @@
 #!/bin/bash
 
-name='alex2'
-base_dir='/root/CA'
+name='alexS10'
+
 key="${base_dir}/${name}.key"
 csr="${base_dir}/${name}.csr"
 crt="${base_dir}/${name}.crt"
+
+base_dir='/home/alex/CA'
+working_dir="${base_dir}/Working"
+key="${working_dir}/${name}.key"
+csr="${working_dir}/${name}.csr"
+
+mkdir -p ${working_dir}
+
 #for encrypted key use -sha256 otherwise, nodes
 openssl req -new -nodes -out $csr -keyout $key -config <(
 cat <<-EOF
