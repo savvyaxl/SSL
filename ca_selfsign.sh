@@ -1,16 +1,16 @@
 #!/bin/bash
+#create CA
 
-#export name='brew.savvyaxl.com.br'
 . ./paths.ini
 
 mkdir -p ${PEM_dir}
 mkdir -p ${DB_dir}
 
 if [[ ! -f ${DB} ]]; then touch ${DB}; fi
-if [[ ! -f ${index} ]]; then echo 04 > ${index}; fi
+if [[ ! -f ${index} ]]; then echo 01 > ${index}; fi
 
-
-openssl ca -in ${csr} -out ${crt} -keyfile ${root_key} -cert ${root_crt} -config <(
+# self sign the CA key
+openssl ca -in ${root_csr} -out ${root_crt} -keyfile ${root_key} -selfsign -config <(
 cat <<-EOF
 [ default ]
 ca                      = root-ca               # CA name
@@ -21,7 +21,7 @@ new_certs_dir           = ${PEM_dir}            # Certificate archive
 database                = ${DB}                 # Index file
 serial                  = ${index}              # Serial number file
 unique_subject          = no                    # Require unique subject
-default_days            = 365                   # How long to certify for
+default_days            = 3650                  # How long to certify for
 default_md              = sha256                # MD to use
 policy                  = any_pol               # Default naming policy
 email_in_dn             = no                    # Add email to cert DN

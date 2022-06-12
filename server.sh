@@ -1,10 +1,8 @@
 #!/bin/bash
 
-name='savvyaxl.com.br'
-base_dir='/root/CA'
-key="${base_dir}/${name}.key"
-csr="${base_dir}/${name}.csr"
-crt="${base_dir}/${name}.crt"
+export name='brew.savvyaxl.com.br'
+. ./paths.ini
+mkdir -p ${working_dir}
 
 #for encrypted key use -sha256
 openssl req -new -nodes -out $csr -keyout $key -config <(
@@ -31,10 +29,8 @@ keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
 
 [ alt_names ]
-DNS.1 = $name
-DNS.2 = www.${name}
-DNS.3 = home.${name}
-DNS.4 = brew.${name}
+DNS.0 = $name
+IP.0 = 127.0.0.1
 
 EOF
 )
