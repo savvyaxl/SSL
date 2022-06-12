@@ -6,8 +6,9 @@
 mkdir -p ${PEM_dir}
 mkdir -p ${DB_dir}
 
+date_=$(date +%Y%m%d)
 if [[ ! -f ${DB} ]]; then touch ${DB}; fi
-if [[ ! -f ${index} ]]; then echo 01 > ${index}; fi
+if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
 
 # self sign the CA key
 openssl ca -in ${root_csr} -out ${root_crt} -keyfile ${root_key} -selfsign -config <(

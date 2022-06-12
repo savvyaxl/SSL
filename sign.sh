@@ -4,6 +4,7 @@ if [[ -n $1 ]]
 then
     name=$1
 else
+    echo Please set the certificate name
     exit 1
 fi
 
@@ -13,8 +14,9 @@ export name
 mkdir -p ${PEM_dir}
 mkdir -p ${DB_dir}
 
+date_=$(date +%Y%m%d)
 if [[ ! -f ${DB} ]]; then touch ${DB}; fi
-if [[ ! -f ${index} ]]; then echo 04 > ${index}; fi
+if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
 
 
 openssl ca -in ${csr} -out ${crt} -keyfile ${root_key} -cert ${root_crt} -config <(
