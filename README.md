@@ -11,9 +11,9 @@ this will make things executable
 ./ca_selfsign.sh
 
 # Create SERVER certificate and sign it
-./client.sh certificate name <br>
-./sign.sh certificate name
+./client.sh &#60;certificate name&#62; <br>
+./sign.sh &#60;certificate name&#62;
 
 # Create CLIENT certificate and sign it
-./server.sh site FQDN <br>
-./sign.sh certificate name
+./server.sh &#60;site FQDN&#62; <br>
+./sign.sh &#60;certificate name&#62;
