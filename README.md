@@ -6,6 +6,14 @@ Run:<br>
 sh runme.sh<br>
 this will make things executable
 
+# Important
+Make changes to the scripts with your own information
+Change:
+ca_create.sh<br>
+client.sh<br>
+server.sh<br>
+They will create the certificate sighing request
+
 # Create CA
 ./ca_create.sh <br>
 ./ca_selfsign.sh
