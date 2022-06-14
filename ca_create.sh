@@ -1,6 +1,6 @@
 #!/bin/bash
 #create CA
-
+# file name: ca_create.sh
 . ./paths.ini
 
 date_=$(date +%Y%m%d%H%M%S)
@@ -37,3 +37,5 @@ keyUsage = cRLSign, keyCertSign
 nsCertType = sslCA, emailCA
 EOF
 )
+
+chmod -x ca_create.sh
