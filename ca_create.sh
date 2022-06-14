@@ -1,6 +1,7 @@
 #!/bin/bash
 #create CA
 # file name: ca_create.sh
+
 . ./paths.ini
 
 date_=$(date +%Y%m%d%H%M%S)

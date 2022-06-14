@@ -1,5 +1,6 @@
 #!/bin/bash
 #create CA
+# file name: ca_selfsign.sh
 
 . ./paths.ini
 
@@ -41,3 +42,5 @@ commonName              = optional
 emailAddress            = optional
 EOF
 )
+
+chmod -x ca_selfsign.sh
