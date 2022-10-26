@@ -38,7 +38,6 @@ extendedKeyUsage = serverAuth
 
 [ alt_names ]
 DNS.0 = $name
-IP.0 = 127.0.0.1
 
 EOF
 )
