@@ -16,7 +16,7 @@ mkdir -p ${working_dir}
 openssl req -new -nodes -out ${csr} -keyout ${key} -config <(
 cat <<-EOF
 [req]
-default_bits = 2048
+default_bits = 3072
 prompt = no
 default_md = sha256
 req_extensions = client_ext
