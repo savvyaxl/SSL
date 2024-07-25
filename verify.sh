@@ -36,4 +36,3 @@ then
     echo 'this crt'
     openssl x509 -noout -text -in $crt
 fi
-#openssl pkcs12 -export -inkey $key -in $crt -certfile ${root_crt} -out /tmp/${name}.p12
