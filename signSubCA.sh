@@ -46,7 +46,7 @@ default_crl_days        = 730
 basicConstraints = CA:true
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always
-keyUsage = Digital Signature,Certificate Sign,CRL Sign
+keyUsage = digitalSignature,cRLSign,keyCertSign
 crlDistributionPoints = URI:http://node01.nfs.info/CA.crl
 
 [ any_pol ]
