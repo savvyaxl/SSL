@@ -16,29 +16,20 @@ mkdir -p ${working_dir}
 openssl req -new -nodes -out $csr -keyout $key -config <(
 cat <<-EOF
 [req]
-default_bits = 3072
+default_bits = 4096
 prompt = no
-default_md = sha256
+default_md = sha384
 req_extensions = req_ext
 distinguished_name = dn
 
 [ dn ]
-C=BR
-ST=Parana
-L=Sao Jose dos Pinhais
-O=Security
-OU=Web Server
+dc=nfs
+dc=info
 CN = $name
 
 [ req_ext ]
-subjectAltName = @alt_names
-basicConstraints = CA:FALSE
-keyUsage = nonRepudiation, digitalSignature, keyEncipherment
-extendedKeyUsage = serverAuth
-
-[ alt_names ]
-DNS.0 = $name
-#DNS.1 = *.$name
+basicConstraints = critical,CA:true
+keyUsage = digitalSignature,cRLSign,keyCertSign
 
 EOF
 )
