@@ -19,8 +19,7 @@ if [[ ! -f ${DB} ]]; then touch ${DB}; fi
 if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
 
 
-#openssl ca -batch -in ${csr} -out ${crt} -keyfile ${root_key} -cert ${root_crt} -config <(
-openssl ca -gencrl -keyfile ${root_key} -cert ${root_crt} -out ${root_crl} -config <(
+openssl ca -batch -in ${csr} -out ${crt} -keyfile ${root_key} -cert ${root_crt} -config <(
 cat <<-EOF
 [ default ]
 ca                      = root-ca               # CA name
