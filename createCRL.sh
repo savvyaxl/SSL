@@ -54,3 +54,5 @@ commonName              = optional
 emailAddress            = optional
 EOF
 )
+
+openssl crl -inform PEM -in ${root_crl} -outform DER -out ${root_crl_der}
