@@ -9,7 +9,7 @@ mkdir -p ${DB_dir}
 date_=$(date +%Y%m%d)
 if [[ ! -f ${DB} ]]; then touch ${DB}; fi
 if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
-if [[ ! -f ${crlnumber} ]]; then echo 1 > ${crlnumber}; fi
+if [[ ! -f ${crlnumber} ]]; then echo 1000 > ${crlnumber}; fi
 
 
 openssl ca -gencrl -keyfile ${root_key} -cert ${root_crt} -out ${root_crl} -config <(
