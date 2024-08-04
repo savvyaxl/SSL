@@ -43,7 +43,7 @@ crlnumber               = ${crlnumber}
 default_crl_days        = 730
 
 [ mySubCA ]
-basicConstraints = CA:true
+basicConstraints = critical,CA:true
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always
 keyUsage = digitalSignature,cRLSign,keyCertSign
