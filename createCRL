@@ -1,0 +1,3 @@
+openssl ca -config ca.conf -gencrl -keyfile ca.key -cert ca.crt -out root.crl.pem
+openssl crl -inform PEM -in root.crl.pem -outform DER -out root.crl
+rm root.crl.pem
