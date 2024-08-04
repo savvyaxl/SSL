@@ -20,7 +20,7 @@ if [[ ! -f ${index} ]]; then echo ${date_}0001 > ${index}; fi
 
 
 #openssl ca -batch -in ${csr} -out ${crt} -keyfile ${root_key} -cert ${root_crt} -config <(
-openssl ca -gencrl -keyfile ${root_key} -cert ${root_crt} -out root.crl.pem
+openssl ca -gencrl -keyfile ${root_key} -cert ${root_crt} -out ${root_crl} -config <(
 cat <<-EOF
 [ default ]
 ca                      = root-ca               # CA name
@@ -40,7 +40,7 @@ name_opt                = ca_default            # Subject DN display options
 cert_opt                = ca_default            # Certificate display options
 #copy_extensions         = copy                  # Copy extensions from CSR
 x509_extensions         = mySubCA
-crlnumber               = $DB/crlnumber
+crlnumber               = ${crlnumber}
 default_crl_days        = 730
 
 [ mySubCA ]
