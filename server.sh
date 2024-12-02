@@ -38,7 +38,7 @@ extendedKeyUsage = serverAuth
 
 [ alt_names ]
 DNS.0 = $name
-#DNS.1 = *.$name
+#DNS.1 = node01.nfs.info
 
 EOF
 )
