@@ -38,8 +38,9 @@ extendedKeyUsage = serverAuth
 
 [ alt_names ]
 DNS.0 = $name
-#DNS.1 = node01.nfs.info
-
+#DNS.1 = *.savvyaxl.com.br
+#DNS.2 = keycloak.savvyaxl.com.br
+#IP.0  = 192.168.0.54
 EOF
 )
 
